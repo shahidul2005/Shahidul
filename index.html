@@ -1,82 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md Shahidul Islam - Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md Shahidul Islam | Portfolio</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: green; /* SIMPLE GREEN (will definitely work) */
-    }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header {
-      background-color: #145a32;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    section {
-      width: 80%;
-      margin: 15px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    h2 {
-      color: #145a32;
-    }
+body {
+  background: linear-gradient(135deg, #0f9b0f, #2ecc71);
+  color: #333;
+}
 
-    footer {
-      text-align: center;
-      background-color: #145a32;
-      color: white;
-      padding: 10px;
-    }
-  </style>
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #2ecc71;
+}
+
+/* HERO */
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 50px;
+  animation: fadeDown 1s ease;
+}
+
+header p {
+  font-size: 20px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* SECTIONS */
+section {
+  width: 85%;
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: 0.6s;
+}
+
+section.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+h2 {
+  color: #145a32;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* CARD STYLE */
+.card {
+  padding: 15px;
+  border-left: 5px solid #2ecc71;
+  margin-top: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
 <header>
   <h1>Md Shahidul Islam</h1>
   <p>Marketing Student | Future Business Professional</p>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
   <h2>About Me</h2>
-  <p>I am an international student pursuing a BBA in Marketing at Pacific States University. I am passionate about business, branding, and building a successful career in the United States.</p>
+  <p>
+    I am Md Shahidul Islam, an international student studying BBA in Marketing at Pacific States University. 
+    I am passionate about branding, business growth, and building a successful career in the United States.
+  </p>
 </section>
 
-<section>
+<!-- SKILLS -->
+<section id="skills">
   <h2>Skills</h2>
-  <ul>
-    <li>Digital Marketing</li>
-    <li>Communication Skills</li>
-    <li>Microsoft Office</li>
-    <li>Basic HTML & CSS</li>
-    <li>Teamwork & Leadership</li>
-  </ul>
+  <div class="card">Digital Marketing</div>
+  <div class="card">Communication Skills</div>
+  <div class="card">Microsoft Office</div>
+  <div class="card">HTML & CSS</div>
+  <div class="card">Leadership & Teamwork</div>
 </section>
 
-<section>
+<!-- PROJECTS -->
+<section id="projects">
   <h2>Projects</h2>
-  <p><strong>Personal Portfolio Website:</strong> Designed and developed a personal website using HTML and GitHub Pages.</p>
+  <div class="card">
+    <strong>Personal Portfolio Website</strong><br>
+    Designed and developed a responsive personal website using HTML, CSS, and GitHub Pages.
+  </div>
+
+  <div class="card">
+    <strong>Marketing Case Study</strong><br>
+    Analyzed branding strategies and consumer behavior in global markets.
+  </div>
 </section>
 
-<section>
+<!-- CONTACT -->
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: yourname@psu.edu</p>
+  <p>LinkedIn: Add your link here</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Md Shahidul Islam</p>
+  © 2026 Md Shahidul Islam
 </footer>
+
+<!-- JAVASCRIPT FOR SCROLL ANIMATION -->
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
