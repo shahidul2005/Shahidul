@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Md Shahidul Islam | Portfolio</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -22,7 +21,6 @@ html {
 
 body {
   background: linear-gradient(135deg, #0f9b0f, #2ecc71);
-  color: #333;
 }
 
 /* NAVBAR */
@@ -32,14 +30,12 @@ nav {
   background: rgba(0,0,0,0.7);
   padding: 15px;
   text-align: center;
-  z-index: 1000;
 }
 
 nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
-  font-weight: 500;
   transition: 0.3s;
 }
 
@@ -58,15 +54,30 @@ header {
   text-align: center;
 }
 
+/* PROFILE IMAGE */
+.profile-pic {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  margin-bottom: 15px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.08);
+}
+
+/* TEXT */
 header h1 {
-  font-size: 50px;
-  animation: fadeDown 1s ease;
+  font-size: 40px;
 }
 
 header p {
-  font-size: 20px;
-  margin-top: 10px;
-  opacity: 0.9;
+  font-size: 18px;
+  margin-top: 5px;
 }
 
 /* SECTIONS */
@@ -92,16 +103,12 @@ h2 {
   margin-bottom: 15px;
 }
 
-ul {
-  padding-left: 20px;
-}
-
-/* CARD STYLE */
+/* CARDS */
 .card {
   padding: 15px;
-  border-left: 5px solid #2ecc71;
   margin-top: 10px;
   background: #f9f9f9;
+  border-left: 5px solid #2ecc71;
   border-radius: 8px;
 }
 
@@ -110,18 +117,6 @@ footer {
   text-align: center;
   padding: 20px;
   color: white;
-}
-
-/* ANIMATIONS */
-@keyframes fadeDown {
-  from {
-    transform: translateY(-40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 </style>
 </head>
@@ -138,16 +133,18 @@ footer {
 
 <!-- HERO -->
 <header>
+  <img src="profile.jpg" alt="Md Shahidul Islam" class="profile-pic">
   <h1>Md Shahidul Islam</h1>
-  <p>Marketing Student | Future Business Professional</p>
+  <p>Marketing Student | Pacific States University</p>
+  <p><strong>Student ID:</strong> IDP25638</p>
 </header>
 
 <!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I am Md Shahidul Islam, an international student studying BBA in Marketing at Pacific States University. 
-    I am passionate about branding, business growth, and building a successful career in the United States.
+    I am Md Shahidul Islam, an international student pursuing a BBA in Marketing at Pacific States University. 
+    I am passionate about business strategy, branding, and building a successful professional career in the United States.
   </p>
 </section>
 
@@ -166,12 +163,12 @@ footer {
   <h2>Projects</h2>
   <div class="card">
     <strong>Personal Portfolio Website</strong><br>
-    Designed and developed a responsive personal website using HTML, CSS, and GitHub Pages.
+    Designed and developed a responsive website using HTML, CSS, and GitHub Pages.
   </div>
 
   <div class="card">
     <strong>Marketing Case Study</strong><br>
-    Analyzed branding strategies and consumer behavior in global markets.
+    Conducted analysis on branding strategies and consumer behavior.
   </div>
 </section>
 
@@ -179,15 +176,14 @@ footer {
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: yourname@psu.edu</p>
-  <p>LinkedIn: Add your link here</p>
+  <p>LinkedIn: Add your link</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 Md Shahidul Islam
 </footer>
 
-<!-- JAVASCRIPT FOR SCROLL ANIMATION -->
+<!-- SCROLL ANIMATION -->
 <script>
 const sections = document.querySelectorAll("section");
 
